@@ -1,4 +1,6 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
     authDomain: "react-chatapp-4d64f.firebaseapp.com",
@@ -9,3 +11,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+
+export const auth = getAuth()
+export const db = getFirestore()
